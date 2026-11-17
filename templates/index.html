@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris ML Predictor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">MLOps · Kubernetes Demo</p>
+      <h1>Identify the Iris Flower</h1>
+      <p>Enter the flower measurements to get a prediction from the deployed ML model.</p>
+    </header>
+    <form id="prediction-form">
+      <div class="fields">
+        <label>Sepal length (cm)<input name="sepal_length" type="number" step="0.1" min="0.1" value="5.1" required></label>
+        <label>Sepal width (cm)<input name="sepal_width" type="number" step="0.1" min="0.1" value="3.5" required></label>
+        <label>Petal length (cm)<input name="petal_length" type="number" step="0.1" min="0.1" value="1.4" required></label>
+        <label>Petal width (cm)<input name="petal_width" type="number" step="0.1" min="0.1" value="0.2" required></label>
+      </div>
+      <button type="submit">Predict Species</button>
+    </form>
+    <section id="result" class="result" aria-live="polite">Prediction result will appear here.</section>
+    <p class="api-link">API documentation: <a href="/docs">Open Swagger UI</a></p>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
